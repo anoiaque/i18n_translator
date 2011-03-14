@@ -26,7 +26,7 @@ end
 module I18nTranslator
     
   def self.create_locale(args)
-    redefine_hash_class
+    redefine_hash_to_yaml
     source = File.join(args[:dir_path], "#{args[:from].to_s}.yml")
     source_yaml = YAML.load_file(source)
 
@@ -44,18 +44,12 @@ module I18nTranslator
     Insider.undefine(Hash, :to_yaml)
   end
   
-  def self.redefine_yaml_module
-    
-  end
-  
-  def self.redefine_hash_class
+  def self.redefine_hash_to_yaml
     Insider.redefine(Hash, :to_yaml) do |opts|
       YAML::quick_emit( object_id, opts ) do |out|
         out.map( taguri, to_yaml_style ) do |map|
           sort.each do |k, v|
-            unless v.is_a?(Hash) 
-              v = EasyTranslate.translate(v, :to => @@target_language) 
-            end
+            v = EasyTranslate.translate(v, :to => @@target_language) unless v.is_a?(Hash) 
             map.add( k, v )
           end
         end
