@@ -1,2 +1,6 @@
+Conventions on locales structure
 
-TODO : PAss lambda for translator to translate with other translators
+
+TODO :
+ PAss lambda for translator to translate with other translators
+Adapt to be more flexible
