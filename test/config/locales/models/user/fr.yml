@@ -1,0 +1,6 @@
+fr:
+  models:
+    user:
+      car: voiture
+      error: erreur
+      house: maison
