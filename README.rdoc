@@ -1,3 +1,53 @@
-Tomorrow :) and tomorrow as gem ...
+== Overview
 
-i18n:translate['fr','en;es']
+Rake task which create translated locales files of a rails project from source locales. 
+Translations are 'bulk' translations from google, and might be reviewed but that's a easy first step'.
+Ceate your locales files with your own language and run the task with targeted languages.
+It uses the gem 'easy_translator' wich use google translations api.
+
+<b>Example:</b> > rake i18n:translate['en','fr;es'].
+
+Separate targets languages symbols with semicolons.
+
+<b>/!\ Don't put space after the coma for rake tasks parameters.</b>
+
+== Convention
+
+The source locale is supposed to be name <lang>.yml where lang is the language symbol (fr, en , es ... and so on)
+
+== Example
+
+- config
+ - locales
+  - models
+   - user
+    - en.yml
+   - book
+    - en.yml
+    
+Will generate :
+
+- config
+ - locales
+  - models
+   - user
+    - en.yml
+    - fr.yml
+    - es.yml
+   - book
+    - en.yml
+    - fr.yml
+    - es.yml
+  
+== Dependencies
+
+* rake
+* easy_translator    
+
+== TO-DOs
+
+Add options to be more flexible ; ie pass a translator lambda to use other translator.
+
+== Issues
+
+Sometimes phrases with interpolations are not double quoted
