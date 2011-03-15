@@ -4,3 +4,4 @@ fr:
       car: voiture
       error: erreur
       house: maison
+      total_user: "Utilisateurs : {{n}}"
