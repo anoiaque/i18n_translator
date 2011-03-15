@@ -70,3 +70,8 @@ Add options to be more flexible ; ie pass a translator lambda to use other trans
 == Issues
 
 Sometimes phrases with interpolations are not double quoted
+
+
+== Licence
+
+MIT Licence
