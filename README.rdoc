@@ -9,6 +9,10 @@ It uses the gem 'easy_translator' which use google translations api.
 
   gem install i18n_translator
 
+and require the gem in your rails project
+
+  gem 'i18n_translator'
+
 == Usage
 
   rake i18n:translate['en','fr;es'].
