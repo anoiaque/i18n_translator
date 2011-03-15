@@ -5,6 +5,10 @@ Translations are 'bulk' translations from google, and might be reviewed but that
 Create your locales files with your own language and run the task with targeted languages.
 It uses the gem 'easy_translator' which use google translations api.
 
+== Installation
+
+  gem install i18n_translator
+
 == Usage
 
   rake i18n:translate['en','fr;es'].
