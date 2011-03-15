@@ -1,1 +1,3 @@
 Tomorrow :) and tomorrow as gem ...
+
+i18n:translate['fr','en;es']
