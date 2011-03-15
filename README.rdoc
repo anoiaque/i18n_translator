@@ -1,8 +1,11 @@
 == Overview
 
 Rake task which creates translated locales files of a rails project from source locales. 
+
 Translations are 'bulk' translations from google, and might be reviewed but that's a easy first step.
+
 Create your locales files with your own language and run the task with targeted languages.
+
 It uses the gem 'easy_translator' which use google translations api.
 
 == Installation
@@ -18,9 +21,11 @@ and require the gem in your rails project
   rake i18n:translate['en','fr;es'].
 
 Separate targets languages symbols with semicolons.
+
 <b>/!\ Don't put space after the coma for rake tasks parameters.</b>
 
 With no additional argument, it will translate and create locales for <b>all</b> your source locales.
+
 If you want to just do the work with only one locale source, pass an additional path to file source argument to rake tasks :
 
   rake i18n:translate['en','fr;es','config/locales/user/en.yml'].
