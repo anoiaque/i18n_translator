@@ -19,7 +19,7 @@ If you want to just do the work with only one locale source, pass an additional 
 
 == Convention
 
-The source locale is supposed to be name <lang>.yml where lang is the language symbol (fr, en , es ... and so on)
+The source locale is supposed to be named <lang>.yml where lang is the language symbol (fr, en , es ... and so on)
 
 == Example
 
