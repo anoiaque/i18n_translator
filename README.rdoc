@@ -8,6 +8,10 @@ Create your locales files with your own language and run the task with targeted 
 
 It uses the gem 'easy_translator' which use google translations api.
 
+== Code Quality Metrics
+
+{<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/anoiaque/i18n_translator]
+
 == Installation
 
   gem install i18n_translator
